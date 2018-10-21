@@ -9,10 +9,11 @@ const PricingDrawerItem = StackNavigator({
   Pricing: {
     screen: Pricing,
     navigationOptions: ({ navigation }) => ({
-      title: 'Simular',
+      title: 'iMatch',
+        color: '#000',
       headerLeft: (
         <Icon
-          name="menu"
+          name="star"
           size={30}
           type="entypo"
           iconStyle={{ paddingLeft: 10 }}
@@ -24,17 +25,17 @@ const PricingDrawerItem = StackNavigator({
 });
 
 PricingDrawerItem.navigationOptions = {
-  drawerLabel: 'Simular',
+  drawerLabel: 'iMatch',
   drawerIcon: ({ tintColor }) => (
     <Icon
-      name="attach-money"
+      name="star"
       size={30}
       iconStyle={{
         width: 30,
         height: 30
       }}
       type="material"
-      color={tintColor}
+      color='#000'
     />
   ),
 };

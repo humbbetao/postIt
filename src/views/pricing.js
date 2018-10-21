@@ -124,12 +124,12 @@ class Pricing extends Component {
                                 <Image source={require('../images/red.png')} resizeMode={'contain'}
                                        style={{height: 62, width: 62}}/>
                             </TouchableOpacity>
-                            <TouchableOpacity style={[styles.button, styles.orange]} onPress={() => {
-                                this.swiper.goBackFromLeft();
-                            }}>
-                                <Image source={require('../images/back.png')} resizeMode={'contain'}
-                                       style={{height: 32, width: 32, borderRadius: 5}}/>
-                            </TouchableOpacity>
+                            {/*<TouchableOpacity style={[styles.button, styles.orange]} onPress={() => {*/}
+                                {/*this.swiper.goBackFromLeft();*/}
+                            {/*}}>*/}
+                                {/*<Image source={require('../images/back.png')} resizeMode={'contain'}*/}
+                                       {/*style={{height: 32, width: 32, borderRadius: 5}}/>*/}
+                            {/*</TouchableOpacity>*/}
                             <TouchableOpacity style={[styles.button, styles.green]} onPress={() => {
                                 this.setKey();
                                 this.swiper.swipeRight()

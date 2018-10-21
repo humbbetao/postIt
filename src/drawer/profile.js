@@ -10,20 +10,20 @@ const ProfileDrawerItem = StackNavigator({
 );
 
 ProfileDrawerItem.navigationOptions = {
-  drawerLabel: 'iMatch',
-
-  drawerIcon: ({ tintColor }) => (
-    <Icon
-      name="person"
-      size={30}
-      iconStyle={{
-        width: 30,
-        height: 30
-      }}
-      type="material"
-      color={tintColor}
-    />
-  ),
+    drawerLabel: 'iMatch',
+    header: 'null',
+    drawerIcon: ({ tintColor }) => (
+        <Icon
+            name="settings"
+            size={30}
+            iconStyle={{
+                width: 30,
+                height: 30
+            }}
+            type="material"
+            color={tintColor}
+        />
+    )
 };
 
 export default ProfileDrawerItem;

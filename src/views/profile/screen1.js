@@ -482,7 +482,6 @@ const styles = StyleSheet.create({
         width: SCREEN_WIDTH -20,
         marginTop: 10,
         marginBottom: 20,
-        borderWidth: 0,
         display: 'flex',
         alignItems: 'center',
         backgroundColor: 'white',
@@ -496,7 +495,6 @@ const styles = StyleSheet.create({
          shadowRadius: 2,
          elevation: 2
     },
-
     buttonsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',

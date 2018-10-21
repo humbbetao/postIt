@@ -9,14 +9,15 @@ const SettingsDrawerItem = StackNavigator({
   Settings: {
     screen: Settings,
     navigationOptions: ({ navigation }) => ({
-      title: 'Revista',
+      title: 'Perfil',
       headerStyle: {
         borderBottomWidth: 0,
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#fff',
       },
+        color: '#000',
       headerLeft: (
         <Icon
-          name="menu"
+          name="user"
           size={30}
           type="entypo"
           iconStyle={{ paddingLeft: 10 }}
@@ -28,17 +29,17 @@ const SettingsDrawerItem = StackNavigator({
 });
 
 SettingsDrawerItem.navigationOptions = {
-  drawerLabel: 'Revista',
+  drawerLabel: 'Perfil',
   drawerIcon: ({ tintColor }) => (
     <Icon
-      name="cog"
+      name="user"
       size={30}
       iconStyle={{
         width: 30,
         height: 30,
       }}
       type="entypo"
-      color={tintColor}
+      color='#000'
     />
   ),
 };

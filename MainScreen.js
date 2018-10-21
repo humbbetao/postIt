@@ -1,23 +1,19 @@
 import React from 'react';
-import Expo, { AppLoading, Asset, Font } from 'expo';
-import { FontAwesome, Ionicons } from '@expo/vector-icons';
-import {View, Image, Dimensions, Text} from 'react-native';
-import { DrawerNavigator, DrawerItems } from 'react-navigation';
+import Expo, {AppLoading, Asset, Font} from 'expo';
+import {FontAwesome, Ionicons} from '@expo/vector-icons';
+import {Dimensions, Image, Text, View} from 'react-native';
+import {DrawerItems, DrawerNavigator} from 'react-navigation';
 
 import Components from './src/drawer/components';
-import Ratings from './src/drawer/ratings';
 import Pricing from './src/drawer/pricing';
-import Login from './src/drawer/login';
-import Profile from './src/drawer/profile';
-import Lists from './src/drawer/lists';
 import Settings from './src/drawer/settings';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const CustomDrawerContentComponent = props => (
-    <View style={{ flex: 1, backgroundColor: '#43484d' }}>
+    <View style={{ flex: 1, backgroundColor: '#ffff', opacity: 1 }}>
         <View style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}>
-            <Text> IMatch </Text>
+            <Text> iCarros </Text>
         </View>
         <View style={{ marginLeft: 10 }}>
             <DrawerItems {...props} />
@@ -31,22 +27,7 @@ const MainRoot = DrawerNavigator(
         Login: {
             path: '/login',
             screen: Components,
-        },
-        Profile: {
-            path: '/profile',
-            screen: Profile,
-        },
-        Lists: {
-            path: '/lists',
-            screen: Lists,
-        },
-        Components: {
-            path: '/components',
-            screen: Login,
-        },
-        Ratings: {
-            path: '/ratings',
-            screen: Ratings,
+            navigationOptions: { tabNavigationBar: false },
         },
         Pricing: {
             path: '/pricing',
@@ -58,17 +39,7 @@ const MainRoot = DrawerNavigator(
         },
     },
     {
-        initialRouteName: 'Login',
-        contentOptions: {
-            activeTintColor: '#548ff7',
-            activeBackgroundColor: 'transparent',
-            inactiveTintColor: '#ffffff',
-            inactiveBackgroundColor: 'transparent',
-            labelStyle: {
-                fontSize: 15,
-                marginLeft: 0,
-            },
-        },
+        // initialRouteName: 'Login',
         drawerWidth: SCREEN_WIDTH * 0.8,
         contentComponent: CustomDrawerContentComponent,
         drawerOpenRoute: 'DrawerOpen',
