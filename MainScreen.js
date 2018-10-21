@@ -1,7 +1,7 @@
 import React from 'react';
 import Expo, { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
-import { View, Image, Dimensions } from 'react-native';
+import {View, Image, Dimensions, Text} from 'react-native';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
 
 import Components from './src/drawer/components';
@@ -17,11 +17,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const CustomDrawerContentComponent = props => (
     <View style={{ flex: 1, backgroundColor: '#43484d' }}>
         <View style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}>
-            <Image
-                source={require('./src/images/logo.png')}
-                style={{ width: SCREEN_WIDTH * 0.57 }}
-                resizeMode="contain"
-            />
+            <Text> IMatch </Text>
         </View>
         <View style={{ marginLeft: 10 }}>
             <DrawerItems {...props} />

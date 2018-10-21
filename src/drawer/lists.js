@@ -14,7 +14,7 @@ const ListsDrawerItem = StackNavigator({
 );
 
 ListsDrawerItem.navigationOptions = {
-  drawerLabel: 'Lists',
+  drawerLabel: 'Person',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="list"

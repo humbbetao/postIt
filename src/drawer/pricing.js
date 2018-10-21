@@ -9,7 +9,7 @@ const PricingDrawerItem = StackNavigator({
   Pricing: {
     screen: Pricing,
     navigationOptions: ({ navigation }) => ({
-      title: 'Pricing',
+      title: 'Simular',
       headerLeft: (
         <Icon
           name="menu"
@@ -24,7 +24,7 @@ const PricingDrawerItem = StackNavigator({
 });
 
 PricingDrawerItem.navigationOptions = {
-  drawerLabel: 'Pricing',
+  drawerLabel: 'Simular',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="attach-money"

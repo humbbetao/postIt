@@ -9,7 +9,7 @@ const SettingsDrawerItem = StackNavigator({
   Settings: {
     screen: Settings,
     navigationOptions: ({ navigation }) => ({
-      title: 'Settings',
+      title: 'Revista',
       headerStyle: {
         borderBottomWidth: 0,
         backgroundColor: '#f5f5f5',
@@ -28,7 +28,7 @@ const SettingsDrawerItem = StackNavigator({
 });
 
 SettingsDrawerItem.navigationOptions = {
-  drawerLabel: 'Settings',
+  drawerLabel: 'Revista',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="cog"
