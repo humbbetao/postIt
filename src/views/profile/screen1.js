@@ -81,57 +81,42 @@ export default class LoginScreen1 extends Component {
                     <View style={{flex: 1, backgroundColor: 'rgba(255,255,255,1)'}}>
                         <View style={styles.statusBar}/>
                         <ScrollView style={{flex: 1}}>
-                        <View style={[styles.headerContainer, {backgroundColor: '#2060CC'}]}>
-                            <Button
-                                title='Vender'
-                                loading={false}
-                                loadingProps={{size: 'small', color: 'white'}}
-                                buttonStyle={{backgroundColor: '#2060CC'}}
-                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
-                                containerStyle={{marginVertical: 10, height: 30, width: 60, borderWidth: 0}}
-                                onPress={() => console.log('aye')}
-                                underlayColor="transparent"
-                            />
-                            <Button
-                                title='Catálogo'
-                                loading={false}
-                                loadingProps={{size: 'small', color: 'white'}}
-                                buttonStyle={{backgroundColor: '#2060CC'}}
-                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
-                                containerStyle={{marginVertical: 10, height: 30, width: 65, borderWidth: 0,}}
-                                onPress={() => console.log('aye')}
-                                underlayColor="transparent"
-                            />
-                            <Button
-                                title='Fipe & KBB'
-                                loading={false}
-                                loadingProps={{size: 'small', color: 'white'}}
-                                buttonStyle={{backgroundColor: '#2060CC'}}
-                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
-                                containerStyle={{marginVertical: 10, height: 30, width: 75, borderWidth: 0}}
-                                onPress={() => console.log('aye')}
-                                underlayColor="transparent"
-                            />
-                            <Button
-                                title='Financiar'
-                                loading={false}
-                                loadingProps={{size: 'small', color: 'white'}}
-                                buttonStyle={{backgroundColor: '#2060CC'}}
-                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
-                                containerStyle={{marginVertical: 10, height: 30, width: 65, borderWidth: 0}}
-                                onPress={() => console.log('aye')}
-                                underlayColor="transparent"
-                            />
-                            <Button
-                                title='Revista'
-                                loading={false}
-                                loadingProps={{size: 'small', color: 'white'}}
-                                buttonStyle={{backgroundColor: '#2060CC'}}
-                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
-                                containerStyle={{marginVertical: 10, height: 30, width: 60, borderWidth: 0}}
-                                onPress={() => console.log('aye')}
-                                underlayColor="transparent"
-                            />
+                        <View style={[styles.headerContainer, {backgroundColor: '#2060CC', paddingLeft: 15, paddingRight: 15}]}>
+                        <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                          <Image
+                          source={require('../../../assets/images/vender.png')}
+                          style={styles.menuIcon}
+                          />
+                          <Text style={styles.menuLabel}>Vender</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                          <Image
+                          source={require('../../../assets/images/catalogo.png')}
+                          style={styles.menuIcon}
+                          />
+                          <Text style={styles.menuLabel}>Catálogo</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                          <Image
+                          source={require('../../../assets/images/fipe.png')}
+                          style={styles.menuIcon}
+                          />
+                          <Text style={styles.menuLabel}>Fipe & KBB</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                          <Image
+                          source={require('../../../assets/images/financiar.png')}
+                          style={styles.menuIcon}
+                          />
+                          <Text style={styles.menuLabel}>Financiar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                          <Image
+                          source={require('../../../assets/images/revista.png')}
+                          style={styles.menuIcon}
+                          />
+                          <Text style={styles.menuLabel}>Revista</Text>
+                        </TouchableOpacity>
                         </View>
                             <View
                                 style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row', width: SCREEN_WIDTH -40, marginTop: 20}}>
@@ -301,11 +286,32 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center'
     },
+    itemMenu: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 5,
+      marginBottom: 5
+    },
+    menuIcon: {
+      width: 20,
+      height: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    menuLabel: {
+      fontSize: 12,
+      color: '#fff',
+      textAlign: 'center',
+      marginTop: 5
+    },
     nameHeader: {
         color: 'white',
         fontSize: 22,
         textAlign: 'center'
     },
+
     infoTag: {
         backgroundColor: 'transparent',
         width: 127,
