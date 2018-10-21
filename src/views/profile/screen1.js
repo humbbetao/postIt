@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
     StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, StatusBar
 } from 'react-native';
-import {Button} from 'react-native-elements'
+import {Button, ButtonGroup} from 'react-native-elements'
+import { Rating, AirbnbRating } from 'react-native-ratings';
 import {Font} from 'expo';
 import {Collapse, CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 
@@ -80,43 +81,72 @@ export default class LoginScreen1 extends Component {
                     <View style={{flex: 1, backgroundColor: 'rgba(255,255,255,1)'}}>
                         <View style={styles.statusBar}/>
                         <ScrollView style={{flex: 1}}>
-                            <View style={{flex: 1, marginBottom: 10, width: SCREEN_WIDTH - 80, marginLeft: 40}}>
-                                <Text style={{
-                                    flex: 1,
-                                    fontSize: 15,
-                                    color: '#7c7c7c',
-                                    fontFamily: 'regular',
-                                    textAlign: 'center'
-                                }}>
-                                    Seu perfil é:
-                                </Text>
-                            </View>
+                        <View style={[styles.headerContainer, {backgroundColor: '#2060CC'}]}>
+                            <Button
+                                title='Vender'
+                                loading={false}
+                                loadingProps={{size: 'small', color: 'white'}}
+                                buttonStyle={{backgroundColor: '#2060CC'}}
+                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
+                                containerStyle={{marginVertical: 10, height: 30, width: 60, borderWidth: 0}}
+                                onPress={() => console.log('aye')}
+                                underlayColor="transparent"
+                            />
+                            <Button
+                                title='Catálogo'
+                                loading={false}
+                                loadingProps={{size: 'small', color: 'white'}}
+                                buttonStyle={{backgroundColor: '#2060CC'}}
+                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
+                                containerStyle={{marginVertical: 10, height: 30, width: 65, borderWidth: 0,}}
+                                onPress={() => console.log('aye')}
+                                underlayColor="transparent"
+                            />
+                            <Button
+                                title='Fipe & KBB'
+                                loading={false}
+                                loadingProps={{size: 'small', color: 'white'}}
+                                buttonStyle={{backgroundColor: '#2060CC'}}
+                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
+                                containerStyle={{marginVertical: 10, height: 30, width: 75, borderWidth: 0}}
+                                onPress={() => console.log('aye')}
+                                underlayColor="transparent"
+                            />
+                            <Button
+                                title='Financiar'
+                                loading={false}
+                                loadingProps={{size: 'small', color: 'white'}}
+                                buttonStyle={{backgroundColor: '#2060CC'}}
+                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
+                                containerStyle={{marginVertical: 10, height: 30, width: 65, borderWidth: 0}}
+                                onPress={() => console.log('aye')}
+                                underlayColor="transparent"
+                            />
+                            <Button
+                                title='Revista'
+                                loading={false}
+                                loadingProps={{size: 'small', color: 'white'}}
+                                buttonStyle={{backgroundColor: '#2060CC'}}
+                                titleStyle={{fontWeight: 'normal', fontSize: 11}}
+                                containerStyle={{marginVertical: 10, height: 30, width: 60, borderWidth: 0}}
+                                onPress={() => console.log('aye')}
+                                underlayColor="transparent"
+                            />
+                        </View>
                             <View
-                                style={{justifyContent: 'center', alignItems: 'center', flex: 1, flexDirection: 'row'}}>
+                                style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row', width: SCREEN_WIDTH -40, marginTop: 20}}>
                                 <Image
                                     source={require('../../../assets/images/aventureiro.png')}
-                                    style={{width: 70, height: 70}}
+                                    style={{width: 70, height: 70, marginLeft: 35}}
                                 />
-                            </View>
-                            <View style={{
-                                marginTop: 10,
-                                marginHorizontal: 40,
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}>
                                 <Text style={{
-                                    flex: 1,
                                     fontSize: 26,
                                     color: '#2458AE',
                                     fontFamily: 'bold',
-                                    textAlign: 'right'
+                                    textAlign: 'left',
+                                    marginLeft: 30
                                 }}>
                                     Aventureira
-                                </Text>
-                            </View>
-                            <View style={{flex: 1, marginTop: 10, width: SCREEN_WIDTH - 80, marginLeft: 40}}>
-                                <Text style={{flex: 1, fontSize: 15, color: '#7c7c7c', fontFamily: 'regular'}}>
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit praesent fermentum rhoncus.
                                 </Text>
                             </View>
                             <Collapse>
@@ -124,14 +154,14 @@ export default class LoginScreen1 extends Component {
                                     <View style={styles.collapseButtonMore}>
                                         <Text style={{
                                             fontFamily: 'bold',
-                                            fontSize: 24,
+                                            fontSize: 20,
                                             color: '#7c7c7c',
                                             textAlign: 'center',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            marginTop: 20,
-                                            marginBottom: 18
-                                        }}>Sobre seu perfil</Text>
+                                            marginTop: 8,
+                                            marginBottom: 13
+                                        }}>+ sobre seu perfil</Text>
                                         <Image
                                             source={require('../../../assets/images/arrow-down.png')}
                                             style={styles.ButtonMoreImage}
@@ -139,6 +169,11 @@ export default class LoginScreen1 extends Component {
                                     </View>
                                 </CollapseHeader>
                                 <CollapseBody>
+                                <View style={{flex: 1, width: SCREEN_WIDTH, paddingLeft: 40, paddingRight: 40, backgroundColor: '#f6f6f6'}}>
+                                    <Text style={{flex: 1, fontSize: 14, color: '#7c7c7c', fontFamily: 'regular', marginBottom: 20}}>
+                                        Para você a estrada é atração turística. O visual a cada curva impressiona e, perigosamente, desvia a atenção do motorista.  Para carro e motorista, o relacionamento é um desafio constante: em qualquer vacilo, entram em ação assistente de tração e estabilidade e por isso mesmo esse é um item que você não pode dispensar no carro.
+                                    </Text>
+                                </View>
                                     <View style={{flex: 1, width: SCREEN_WIDTH, backgroundColor: '#f6f6f6'}}>
                                         <View style={{
                                             flex: 1,
@@ -146,7 +181,7 @@ export default class LoginScreen1 extends Component {
                                             height: 80,
                                             marginLeft: 40,
                                             marginRight: 10
-                                        }}> 
+                                        }}>
                                             <View style={{flex: 1, flexDirection: 'row'}}>
                                                 <Text style={styles.infoTag}>#Bem-estar</Text>
                                                 <Text style={styles.infoTag}>#Liberdade</Text>
@@ -172,7 +207,7 @@ export default class LoginScreen1 extends Component {
                                                     <Text style={styles.infoTypeLabel}>Tipo de Uso</Text>
                                                     <Text style={styles.infoTypeLabel}>Valor do Carro</Text>
                                                 </View>
-                                                <View style={{flex: 1, marginLeft: 10}}>
+                                                <View style={{flex: 1, marginLeft: 10, marginBottom: 10}}>
                                                     <Text style={styles.infoAnswerLabel}>31</Text>
                                                     <Text style={styles.infoAnswerLabel}>Feminino</Text>
                                                     <Text style={styles.infoAnswerLabel}>Solteira</Text>
@@ -185,29 +220,66 @@ export default class LoginScreen1 extends Component {
                                 </CollapseBody>
                             </Collapse>
                             <View style={styles.mainContainer}>
-                                <Text style={styles.centering}>Carros Sugeridos para você</Text>
+                                <Text style={styles.centering}>Sugestão de carros que são a sua cara:</Text>
                                 <View style={styles.viewContainer}>
-                                    <View style={styles.itemCar}>
+                                    <TouchableOpacity style={styles.itemCar}>
                                         <Image
-                                            source={require('../../../assets/images/car.jpg')}
+                                            source={require('../../../assets/images/ecosport_150px.png')}
                                             style={styles.imageCar}
                                         />
-                                        <Text style={styles.titleCar}>Carro fox</Text>
-                                    </View>
-                                    <View style={styles.itemCar}>
+                                        <View style={styles.inFoCar}>
+                                          <Text style={styles.titleCar}>EcoSport</Text>
+                                          <Text style={{fontSize: 15, color: '#7c7c7c'}}>100% match</Text>
+                                          <Rating
+                                            type="star"
+                                            fractions={1}
+                                            startingValue={5}
+                                            imageSize={20}
+                                            onFinishRating={this.ratingCompleted}
+                                            style={{ paddingVertical: 10 }}
+                                          />
+                                        </View>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={styles.viewContainer}>
+                                    <TouchableOpacity style={styles.itemCar}>
                                         <Image
-                                            source={require('../../../assets/images/car.jpg')}
+                                            source={require('../../../assets/images/ranger_150px.png')}
                                             style={styles.imageCar}
                                         />
-                                        <Text style={styles.titleCar}>Carro fox</Text>
-                                    </View>
-                                    <View style={styles.itemCar}>
+                                        <View style={styles.inFoCar}>
+                                          <Text style={styles.titleCar}>Ranger</Text>
+                                          <Text style={{fontSize: 15, color: '#7c7c7c'}}>100% match</Text>
+                                          <Rating
+                                            type="star"
+                                            fractions={1}
+                                            startingValue={5}
+                                            imageSize={20}
+                                            onFinishRating={this.ratingCompleted}
+                                            style={{ paddingVertical: 10 }}
+                                          />
+                                        </View>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={styles.viewContainer}>
+                                    <TouchableOpacity style={styles.itemCar}>
                                         <Image
-                                            source={require('../../../assets/images/car.jpg')}
+                                            source={require('../../../assets/images/strada_150px.png')}
                                             style={styles.imageCar}
                                         />
-                                        <Text style={styles.titleCar}>Carro fox</Text>
-                                    </View>
+                                        <View style={styles.inFoCar}>
+                                          <Text style={styles.titleCar}>Strada</Text>
+                                          <Text style={{fontSize: 15, color: '#7c7c7c'}}>80% match</Text>
+                                          <Rating
+                                            type="star"
+                                            fractions={1}
+                                            startingValue={5}
+                                            imageSize={20}
+                                            onFinishRating={this.ratingCompleted}
+                                            style={{ paddingVertical: 10 }}
+                                          />
+                                        </View>
+                                    </TouchableOpacity>
                                 </View>
                             </View>
                         </ScrollView>
@@ -305,13 +377,15 @@ const styles = StyleSheet.create({
     },
     imageCar: {
         flexDirection: 'column',
-        width: '80%',
-        height: '80%',
+        width: 150,
+        height: 97,
         borderWidth: 0,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginRight: 20
     },
     viewContainerInputBox: {
         justifyContent: 'center',
+        width: '100%',
         width: '100%',
         marginTop: 20,
         borderWidth: 0,
@@ -322,7 +396,6 @@ const styles = StyleSheet.create({
     buttonsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        width: '100%',
         marginTop: 20,
         borderWidth: 0,
     },
@@ -332,35 +405,96 @@ const styles = StyleSheet.create({
         width: '100%',
         borderWidth: 0,
         backgroundColor: '#ffffff',
+        marginBottom: 20
     },
     centering: {
         fontFamily: 'bold',
-        fontSize: 24,
-        color: '#7c7c7c',
+        fontSize: 16,
+        color: '#666',
+        paddingTop: 10,
+        paddingBottom: 10,
+        backgroundColor: '#e5e5e5',
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20,
-        marginBottom: 18,
-        flexDirection: 'column'
+        flexDirection: 'row'
     },
     itemCar: {
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        width: '30%',
-        height: 200,
-        alignItems: 'center'
+        flexDirection: 'row',
+        justifyContent: 'center',
+        width: SCREEN_WIDTH -25,
+        alignItems: 'center',
+        paddingLeft: 20,
+        paddingRight: 20,
+        borderWidth: 1,
+    borderRadius: 2,
+    borderColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    backgroundColor: '#fff'
+    },
+    infoCar: {
+      justifyContent: 'center',
+      alignItems: 'center'
     },
     titleCar: {
         fontFamily: 'bold',
-        fontSize: 12,
+        fontSize: 17,
         color: '#7c7c7c',
-        textAlign: 'center',
+        textAlign: 'left',
+    },
+    viewContainerInputBox: {
         justifyContent: 'center',
+        width: SCREEN_WIDTH -20,
+        marginTop: 10,
+        marginBottom: 20,
+        borderWidth: 0,
+        display: 'flex',
         alignItems: 'center',
+        backgroundColor: 'white',
+        borderWidth: 1,
+         borderRadius: 2,
+         borderColor: '#ddd',
+         borderBottomWidth: 0,
+         shadowColor: '#000',
+         shadowOffset: { width: 0, height: 1 },
+         shadowOpacity: 0.8,
+         shadowRadius: 2,
+         elevation: 2
+    },
+
+    buttonsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '100%',
         marginTop: 20,
-        marginBottom: 18,
-        flexDirection: 'column'
-    }
+        borderWidth: 0,
+    },
+    viewContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '100%',
+        marginTop: 20,
+        borderWidth: 0,
+    },
+    headerContainer: {
+        alignItems: 'center',
+        padding: 5,
+        backgroundColor: '#4F80E1',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        borderWidth: 0
+    },
+    heading: {
+        color: '#ffffff',
+        backgroundColor: '#4F80E1',
+        marginTop: 10,
+        fontSize: 22,
+        fontWeight: 'normal'
+    },
 
 });
