@@ -4,7 +4,6 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-elements'
 import { Font } from 'expo';
-
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
@@ -35,7 +34,7 @@ class CustomButton extends Component {
       <Button
         title={title}
         titleStyle={{ fontSize: 15, color: 'white', fontFamily: 'regular' }}
-        buttonStyle={selected ? { backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127 } : { borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent' }}
+        buttonStyle={selected ? { backgroundColor: '#2458AE', borderRadius: 3, width: 127 } : { borderWidth: 0, borderRadius: 3, width: 127, backgroundColor: '#ccc' }}
         containerStyle={{ marginRight: 10 }}
         onPress={() => this.setState({ selected: !selected })}
       />
@@ -70,122 +69,77 @@ export default class LoginScreen1 extends Component {
           barStyle="light-content"
         />
         { this.state.fontLoaded ?
-          <View style={{flex: 1, backgroundColor: 'rgba(47,44,60,1)'}}>
+          <View style={{flex: 1, backgroundColor: 'rgba(255,255,255,1)'}}>
             <View style={styles.statusBar} />
-            <View style={styles.navBar}>
-              <Text style={styles.nameHeader}>
-                Theresa, 26
+            <ScrollView style={{flex: 1}}>
+            <View style={{flex: 1, marginBottom: 10, width: SCREEN_WIDTH - 80, marginLeft: 40}}>
+              <Text style={{flex: 1, fontSize: 15, color: '#7c7c7c', fontFamily: 'regular', textAlign: 'center'}}>
+                Seu perfil é:
               </Text>
             </View>
-            <ScrollView style={{flex: 1}}>
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1, flexDirection: 'row'}}>
                 <Image
-                  source={{ uri: 'https://static.pexels.com/photos/428336/pexels-photo-428336.jpeg' }}
-                  style={{ width: IMAGE_SIZE, height: IMAGE_SIZE, borderRadius: 10}}
+                  source={require('../../../assets/images/aventureiro.png')}
+                  style={{ width: 70, height: 70}}
                 />
               </View>
-              <View style={{flex: 1, flexDirection: 'row', marginTop: 20, marginHorizontal: 40, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{flex: 1, fontSize: 26, color: 'white', fontFamily: 'bold'}}>
-                  Theresa
-                </Text>
-                <Text style={{flex: 0.5, fontSize: 15, color: 'gray', textAlign: 'left', marginTop: 5}}>
-                  0.8 mi
-                </Text>
-                <Text style={{flex: 1, fontSize: 26, color: 'green', fontFamily: 'bold', textAlign: 'right'}}>
-                  84%
+              <View style={{marginTop: 10, marginHorizontal: 40, justifyContent: 'center', alignItems: 'center'}}>
+                <Text style={{flex: 1, fontSize: 26, color: '#2458AE', fontFamily: 'bold', textAlign: 'right'}}>
+                  Aventureira
                 </Text>
               </View>
-              <View style={{flex: 1, marginTop: 20, width: SCREEN_WIDTH - 80, marginLeft: 40}}>
-                <Text style={{flex: 1, fontSize: 15, color: 'white', fontFamily: 'regular'}}>
-                  100% Italian, fun loving, affectionate, young lady who knows what it takes to make a relationship work.
+              <View style={{flex: 1, marginTop: 10, width: SCREEN_WIDTH - 80, marginLeft: 40}}>
+                <Text style={{flex: 1, fontSize: 15, color: '#7c7c7c', fontFamily: 'regular'}}>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit praesent fermentum rhoncus.
                 </Text>
               </View>
-              <View style={{flex: 1, marginTop: 30}}>
-                <Text style={{flex: 1, fontSize: 15, color: 'rgba(216, 121, 112, 1)', fontFamily: 'regular', marginLeft: 40}}>
-                  INTERESTS
-                </Text>
-                <View style={{flex: 1, width: SCREEN_WIDTH, marginTop: 20}}>
+              <View style={{flex: 1, marginTop: 20}}>
+              <TouchableOpacity style={styles.ButtonMore} activeOpacity={0.5}>
+              <Text style={{fontFamily: 'bold',fontSize: 24,color: '#7c7c7c',textAlign: 'center', justifyContent: 'center', alignItems: 'center', marginTop: 20, marginBottom: 18}}>Sobre seu perfil</Text>
+                  <Image
+                   source={require('../../../assets/images/arrow-down.png')}
+                   style={styles.ButtonMoreImage}
+                  />
+              </TouchableOpacity>
+                <View style={{flex: 1, width: SCREEN_WIDTH, backgroundColor: '#f6f6f6'}}>
                   <ScrollView
                     style={{flex: 1}}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                   >
-                    <View style={{flex: 1, flexDirection: 'column', height: 170, marginLeft: 40, marginRight: 10}}>
+                    <View style={{flex: 1, flexDirection: 'column', height: 80, marginLeft: 40, marginRight: 10}}>
                       <View style={{flex: 1, flexDirection: 'row'}}>
-                        <CustomButton title="Philosophy" selected={true} />
-                        <CustomButton title="Sport" />
-                        <CustomButton title="Swimming" selected={true} />
-                        <CustomButton title="Religion" />
+                      <Text style={styles.infoTag}>#Bem-estar</Text>
+                      <Text style={styles.infoTag}>#Liberdade</Text>
                       </View>
                       <View style={{flex: 1, flexDirection: 'row' }}>
-                        <CustomButton title="Music" />
-                        <CustomButton title="Soccer" selected={true} />
-                        <CustomButton title="Radiohead" selected={true} />
-                        <CustomButton title="Micheal Jackson" />
-                      </View>
-                      <View style={{ flex: 1, flexDirection: 'row' }}>
-                        <CustomButton title="Travelling" selected={true} />
-                        <CustomButton title="Rock'n'Roll" />
-                        <CustomButton title="Dogs" selected={true} />
-                        <CustomButton title="France" selected={true} />
+                      <Text style={styles.infoTag}>#Natureza</Text>
+                      <Text style={styles.infoTag}>#Viagem</Text>
                       </View>
                     </View>
                   </ScrollView>
                 </View>
               </View>
-              <View style={{flex: 1, marginTop: 30}}>
-                <Text style={{flex: 1, fontSize: 15, color: 'rgba(216, 121, 112, 1)', fontFamily: 'regular', marginLeft: 40}}>
-                  INFO
-                </Text>
-                <View style={{flex: 1, flexDirection: 'row', marginTop: 20, marginHorizontal: 30}}>
+              <View style={{flex: 1, marginTop: 0, backgroundColor: '#f6f6f6'}}>
+                <View style={{flex: 1, flexDirection: 'row', marginTop: 10, marginHorizontal: 40}}>
                   <View style={{flex: 1, flexDirection: 'row'}}>
                     <View style={{flex: 1}}>
-                      <Text style={styles.infoTypeLabel}>Age</Text>
-                      <Text style={styles.infoTypeLabel}>Height</Text>
-                      <Text style={styles.infoTypeLabel}>Ethnicity</Text>
-                      <Text style={styles.infoTypeLabel}>Sign</Text>
-                      <Text style={styles.infoTypeLabel}>Religion</Text>
+                    <Text style={styles.infoTypeLabel}>Idade</Text>
+                      <Text style={styles.infoTypeLabel}>Gênero</Text>
+                      <Text style={styles.infoTypeLabel}>Estado Civil</Text>
+                      <Text style={styles.infoTypeLabel}>Tipo de Uso</Text>
+                      <Text style={styles.infoTypeLabel}>Valor do Carro</Text>
                     </View>
                     <View style={{flex: 1, marginLeft: 10}}>
-                      <Text style={styles.infoAnswerLabel}>26</Text>
-                      <Text style={styles.infoAnswerLabel}>5'4"</Text>
-                      <Text style={styles.infoAnswerLabel}>White</Text>
-                      <Text style={styles.infoAnswerLabel}>Pisces</Text>
-                      <Text style={styles.infoAnswerLabel}>Catholic</Text>
-                    </View>
-                  </View>
-                  <View style={{flex: 1, flexDirection: 'row'}}>
-                    <View style={{flex: 1}}>
-                      <Text style={styles.infoTypeLabel}>Body Type</Text>
-                      <Text style={styles.infoTypeLabel}>Diet</Text>
-                      <Text style={styles.infoTypeLabel}>Smoke</Text>
-                      <Text style={styles.infoTypeLabel}>Drink</Text>
-                      <Text style={styles.infoTypeLabel}>Drugs</Text>
-                    </View>
-                    <View style={{flex: 1, marginLeft: 10, marginRight: -20}}>
-                      <Text style={styles.infoAnswerLabel}>Fit</Text>
-                      <Text style={styles.infoAnswerLabel}>Vegan</Text>
-                      <Text style={styles.infoAnswerLabel}>No</Text>
-                      <Text style={styles.infoAnswerLabel}>No</Text>
-                      <Text style={styles.infoAnswerLabel}>Never</Text>
+                    <Text style={styles.infoAnswerLabel}>31</Text>
+                      <Text style={styles.infoAnswerLabel}>Feminino</Text>
+                      <Text style={styles.infoAnswerLabel}>Solteira</Text>
+                      <Text style={styles.infoAnswerLabel}>Aventura</Text>
+                      <Text style={styles.infoAnswerLabel}>30 a 39.999 mil</Text>
                     </View>
                   </View>
                 </View>
               </View>
-              <Button
-                containerStyle={{ marginVertical: 20 }}
-                style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-                buttonStyle={{ height: 55, width: SCREEN_WIDTH - 40, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
-                linearGradientProps = {{
-                  colors: ['rgba(214,116,112,1)', 'rgba(233,174,87,1)'],
-                  start: [1, 0],
-                  end: [0.2, 0]
-                }}
-                title="Message Theresa"
-                titleStyle={{ fontFamily: 'regular', fontSize: 20, color: 'white', textAlign: 'center' }}
-                onPress={() => console.log('Message Theresa')}
-                activeOpacity={0.5}
-              />
             </ScrollView>
           </View> :
           <Text>Loading...</Text>
@@ -210,17 +164,50 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center'
   },
+  infoTag: {
+    backgroundColor: 'transparent',
+    width: 127,
+    color: '#ff6300',
+    textAlign: 'center',
+    marginRight: 20,
+    fontSize: 16,
+    fontFamily: 'bold',
+    height: 25,
+    marginBottom: 0,
+    marginTop: 0,
+    justifyContent: 'center',
+    alignContent: 'center'
+  },
   infoTypeLabel: {
     fontSize: 15,
     textAlign: 'right',
     color: 'rgba(126,123,138,1)',
     fontFamily: 'regular',
     paddingBottom: 10,
+    borderRadius: 3
   },
   infoAnswerLabel: {
     fontSize: 15,
-    color: 'white',
+    color: '#2262CC',
     fontFamily: 'regular',
     paddingBottom: 10,
+    borderRadius: 3
+  },
+  ButtonMore: {
+    width: SCREEN_WIDTH,
+    borderRadius: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f6f6f6',
+    flex: 1,
+    flexDirection: 'row'
+  },
+  ButtonMoreImage: {
+    height: 20,
+    width: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    opacity: 0.2
   }
 });
