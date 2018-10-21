@@ -146,7 +146,7 @@ export default class LoginScreen1 extends Component {
                                             height: 80,
                                             marginLeft: 40,
                                             marginRight: 10
-                                        }}> 
+                                        }}>
                                             <View style={{flex: 1, flexDirection: 'row'}}>
                                                 <Text style={styles.infoTag}>#Bem-estar</Text>
                                                 <Text style={styles.infoTag}>#Liberdade</Text>

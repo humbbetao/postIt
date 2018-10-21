@@ -3,6 +3,7 @@ import {StackNavigator, TabNavigator} from 'react-navigation';
 import {Icon} from 'react-native-elements';
 
 import ButtonsTab from '../tabs/buttons';
+import Pricing from "../views/pricing";
 
 const Components = TabNavigator(
   {
@@ -39,6 +40,7 @@ Components.navigationOptions = {
       color={tintColor}
     />
   ),
+  title: 'Home',
 };
 
 // Workaround to avoid crashing when you come back on Components screen
