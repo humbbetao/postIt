@@ -266,6 +266,31 @@ export default class LoginScreen1 extends Component {
                                         </View>
                                     </TouchableOpacity>
                                 </View>
+                                <View style={{flex: 1, width: SCREEN_WIDTH, paddingLeft: 40, paddingRight: 40, backgroundColor: '#ffffff'}}>
+                                    <Text style={{flex: 1, fontWeight: 'bold', fontSize: 18, color: '#7c7c7c', fontFamily: 'regular', textAlign: 'center', marginBottom: 20, marginTop: 20}}>
+                                    Deu Match? Que tal compartilhar essa experiência com seus amigos?
+                                    </Text>
+                                </View>
+                                <View style={[styles.headerContainer, {backgroundColor: '#fff', width: SCREEN_WIDTH -140, marginLeft: 70}]}>
+                                <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                                  <Image
+                                  source={require('../../../assets/images/facebook.png')}
+                                  style={[styles.menuIcon, {width: 50, height: 50}]}
+                                  />
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                                  <Image
+                                  source={require('../../../assets/images/twitter.png')}
+                                  style={[styles.menuIcon, {width: 40, height: 40}]}
+                                  />
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.itemMenu} activeOpacity={0.5}>
+                                  <Image
+                                  source={require('../../../assets/images/whatsapp.png')}
+                                  style={[styles.menuIcon, {width: 48, height: 48}]}
+                                  />
+                                </TouchableOpacity>
+                                </View>
                             </View>
                         </ScrollView>
                     </View> :
