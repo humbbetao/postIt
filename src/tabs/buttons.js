@@ -1,9 +1,7 @@
-import Expo from 'expo';
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
 
-import { StackNavigator } from 'react-navigation';
-import { Icon } from 'react-native-elements';
+import {StackNavigator} from 'react-navigation';
+import {Icon} from 'react-native-elements';
 
 import ButtonsHome from '../views/buttons_home';
 import ButtonsDetails from '../views/buttons_detail';
@@ -24,7 +22,7 @@ const ButtonsTab = StackNavigator({
     screen: ButtonsTabView,
     path: '/',
     navigationOptions: ({ navigation }) => ({
-      title: 'Buttons',
+      title: 'iMatch',
       headerLeft: (
         <Icon
           name="menu"

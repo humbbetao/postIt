@@ -12,7 +12,7 @@ const RatingsDrawerItem = StackNavigator({
 });
 
 RatingsDrawerItem.navigationOptions = {
-  drawerLabel: 'Ratings',
+  drawerLabel: 'Tabela Fipe',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="star"

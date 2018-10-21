@@ -13,7 +13,7 @@ const ProfileDrawerItem = StackNavigator({
 );
 
 ProfileDrawerItem.navigationOptions = {
-  drawerLabel: 'Profile',
+  drawerLabel: 'iMatch',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="person"
