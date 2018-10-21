@@ -1,7 +1,6 @@
-import Expo from 'expo';
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
-import { Icon } from 'react-native-elements';
+import {StackNavigator} from 'react-navigation';
+import {Icon} from 'react-native-elements';
 
 import Login from '../views/login';
 
@@ -14,7 +13,7 @@ const LoginDrawerItem = StackNavigator({
 );
 
 LoginDrawerItem.navigationOptions = {
-  drawerLabel: 'Home',
+  drawerLabel: 'Catalogo',
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="email"
