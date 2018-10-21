@@ -7,7 +7,7 @@ import ButtonsHome from '../views/buttons_home';
 import ButtonsDetails from '../views/buttons_detail';
 
 const ButtonsTabView = ({ navigation }) => (
-  <ButtonsHome navigation={navigation} />
+  <ButtonsHome navigation={navigation}/>
 );
 
 const ButtonsDetailTabView = ({ navigation }) => (
@@ -22,13 +22,13 @@ const ButtonsTab = StackNavigator({
     screen: ButtonsTabView,
     path: '/',
     navigationOptions: ({ navigation }) => ({
-      title: 'iMatch',
+      title: 'iCarros',
       headerLeft: (
         <Icon
           name="menu"
           size={30}
           type="entypo"
-          style={{ paddingLeft: 10 }}
+          style={{ paddingLeft: 10}}
           onPress={() => navigation.navigate('DrawerOpen')}
         />
       ),
