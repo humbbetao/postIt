@@ -14,7 +14,7 @@ import Settings from './src/drawer/settings';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-const CustomDrawerContentComponent = props => (
+export const CustomDrawerContentComponent = props => (
     <View style={{ flex: 1, backgroundColor: '#43484d' }}>
         <View style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}>
             <Text> IMatch </Text>
@@ -30,7 +30,7 @@ const MainRoot = DrawerNavigator(
     {
         Login: {
             path: '/login',
-            screen: Login,
+            screen: Components,
         },
         Profile: {
             path: '/profile',
@@ -42,7 +42,7 @@ const MainRoot = DrawerNavigator(
         },
         Components: {
             path: '/components',
-            screen: Components,
+            screen: Login,
         },
         Ratings: {
             path: '/ratings',
@@ -58,7 +58,7 @@ const MainRoot = DrawerNavigator(
         },
     },
     {
-        initialRouteName: 'Components',
+        initialRouteName: 'Login',
         contentOptions: {
             activeTintColor: '#548ff7',
             activeBackgroundColor: 'transparent',

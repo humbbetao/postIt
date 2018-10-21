@@ -7,13 +7,11 @@ import Profile from '../views/profile';
 const ProfileDrawerItem = StackNavigator({
     Playground: { screen: Profile }
   },
-  {
-    headerMode: 'none'
-  }
 );
 
 ProfileDrawerItem.navigationOptions = {
   drawerLabel: 'iMatch',
+
   drawerIcon: ({ tintColor }) => (
     <Icon
       name="person"
